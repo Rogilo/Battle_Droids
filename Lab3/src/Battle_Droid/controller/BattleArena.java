@@ -49,9 +49,7 @@ public class BattleArena {
 
     public void turnInfo(DroidFactory myTeam) {
         this.line();
-        PrintStream var10000 = System.out;
-        int var10003 = this.turnNumber++;
-        var10000.println("Turn number " + var10003);
+        System.out.println("Turn number " + this.turnNumber++);
         System.out.println("Team info:");
         this.slash();
         myTeam.showInfo();
@@ -69,11 +67,6 @@ public class BattleArena {
             this.myDroidIndex = random.nextInt(value);
         }
 
-        this.line();
-        System.out.println(this.myDroidIndex);
-        this.line();
-        System.out.println(this.enemyDroidTurn);
-        this.line();
         PrintStream var10000 = System.out;
         BattleDroid var10001 = (BattleDroid)myTeam.getDroidList().get(this.myDroidIndex);
         var10000.println("Enemy droid attack " + var10001.getName());
@@ -84,18 +77,14 @@ public class BattleArena {
         this.myTeamTurn(this.myDroidTurn, myTeam);
         System.out.print("Enemies that can be attacked:\n");
         enemyTeam.showInfo();
-        PrintStream var10000 = System.out;
-        BattleDroid var10001 = (BattleDroid)myTeam.getDroidList().get(this.myDroidTurn);
-        var10000.println(var10001.getName() + " turn");
+        System.out.println(myTeam.getDroidList().get(this.myDroidTurn).getName() + " turn");
         System.out.print("Choose your enemy!\n");
 
         try {
             String enemyIndex = reader.readLine();
             this.enemyDroidIndex = Integer.parseInt(enemyIndex) - 1;
             this.slash();
-            var10000 = System.out;
-            var10001 = (BattleDroid)enemyTeam.getDroidList().get(this.enemyDroidIndex);
-            var10000.println("Your droid attack " + var10001.getName());
+            System.out.println("Your droid attack " + enemyTeam.getDroidList().get(this.enemyDroidIndex).getName());
             shootEnemyDroid(myTeam, enemyTeam, this.myDroidTurn, this.enemyDroidIndex);
         } catch (IndexOutOfBoundsException var5) {
             System.out.println("Please, choose existing enemy: 1-" + enemyTeam.getDroidList().size());

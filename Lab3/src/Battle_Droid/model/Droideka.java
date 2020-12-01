@@ -12,8 +12,7 @@ public class Droideka extends BattleDroid {
     }
 
     public String toString() {
-        String var10000 = this.getName();
-        return "Name:" + var10000 + " (Type: Droideka HP: " + this.getHealth() + " Dmg: " + this.getDamage() + " AR: "
+        return "Name:" + this.getName()+ " (Type: Droideka HP: " + this.getHealth() + " Dmg: " + this.getDamage() + " AR: "
                 + this.getArmor() + " Crt " + this.getCritChance() + "% Evs " + this.getEvasion() + "% )";
     }
 

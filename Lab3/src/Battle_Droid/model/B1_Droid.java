@@ -11,8 +11,7 @@ public class B1_Droid extends BattleDroid
 
     public String toString()
     {
-        String var10000 = this.getName();
-        return "Name:" + var10000 + " (Type: B1 HP: " + this.getHealth() + " Dmg: " + this.getDamage() + " Crt " +
+        return "Name:" + this.getName() + " (Type: B1 HP: " + this.getHealth() + " Dmg: " + this.getDamage() + " Crt " +
                 this.getCritChance() + "% Evs " + this.getEvasion() + "% )";
     }
 }
