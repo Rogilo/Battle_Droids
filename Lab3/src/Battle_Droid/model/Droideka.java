@@ -12,8 +12,8 @@ public class Droideka extends BattleDroid {
     }
 
     public String toString() {
-        return "Name:" + this.getName()+ " (Type: Droideka HP: " + this.getHealth() + " Dmg: " + this.getDamage() + " AR: "
-                + this.getArmor() + " Crt " + this.getCritChance() + "% Evs " + this.getEvasion() + "% )";
+        return "Name:" + this.getName()+ " (Type: Droideka HP: " + this.getHealth() + " Dmg: " + this.getDamage()
+                + " AR: " + this.getArmor() + " Crt " + this.getCritChance() + "% Evs " + this.getEvasion() + "% )";
     }
 
     public boolean blocByArmor(int damage) {

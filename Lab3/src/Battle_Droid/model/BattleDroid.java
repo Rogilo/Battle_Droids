@@ -1,6 +1,5 @@
 package Battle_Droid.model;
 
-import java.io.PrintStream;
 import java.util.Random;
 
 public class BattleDroid implements Attack {
@@ -9,9 +8,6 @@ public class BattleDroid implements Attack {
     protected int damage;
     protected int evasion;
     protected int criticalAttackChance;
-
-    public BattleDroid() {
-    }
 
     public int criticalStrike(int value) {
         if (this.probability() <= this.getCritChance()) {
@@ -24,9 +20,7 @@ public class BattleDroid implements Attack {
 
     public void attack(BattleDroid droid) {
         int damage = this.prepareAttack();
-        PrintStream var10000 = System.out;
-        int var10001 = droid.getHit(damage);
-        var10000.println("Damage done: " + var10001);
+        System.out.println("Damage done: " + droid.getHit(damage));
     }
 
     public int prepareAttack() {
